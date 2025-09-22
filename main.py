@@ -60,7 +60,6 @@ llm_triagem = ChatGoogleGenerativeAI(
     api_key=GOOGLE_API_KEY
 )
 
-
 from langchain_core.messages import SystemMessage, HumanMessage
 
 triagem_chain = llm_triagem.with_structured_output(TriagemOut)
@@ -80,7 +79,7 @@ from langchain_community.document_loaders import PyMuPDFLoader
 
 docs = []
 # Substitua este caminho pelo caminho real do seu arquivo PDF
-file_path = Path("/content/Politicas-Connect-Gamers.pdf")
+file_path = Path("/content/Politicas_Connect_Gamers.pdf")
 
 if file_path.exists():
     try:
